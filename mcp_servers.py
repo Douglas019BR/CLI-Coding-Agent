@@ -53,8 +53,8 @@ context7 = MCPServerStdio(
 
 MCP_SERVERS = [
     run_python,
-    internet_search,
-    code_reasoning,
-    context7,
-    desktop_commander,
+    internet_search,   
+    # code_reasoning,    # Removido - causa erro de schema no Bedrock
+    context7,          # Adicionado para teste
+    desktop_commander, # Adicionado para teste
 ]

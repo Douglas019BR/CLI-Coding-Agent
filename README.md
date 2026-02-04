@@ -41,3 +41,36 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+## Additional Features
+
+This implementation includes several enhancements beyond the original tutorial:
+
+### Code Organization
+- **Modular structure**: MCP servers separated into `mcp_servers.py`
+- **Instructions externalized**: Agent instructions in `instructions.py`
+- **Color-coded interface**: Enhanced CLI with colored output and startup information
+
+### Built-in Tools
+The agent includes essential file system and command execution tools:
+- `read_file()` - Read file contents
+- `write_file()` - Create/modify files  
+- `list_directory()` - List directory contents
+- `run_command()` - Execute shell commands in current directory
+- `run_unit_tests()` - Run pytest tests
+
+### MCP Server Configuration
+- **Timeout handling**: Increased timeouts for MCP servers that need more initialization time
+- **Compatibility fixes**: Removed MCP servers incompatible with AWS Bedrock schema validation
+- **Dependency management**: Uses pip/pipx instead of UV for easier setup
+
+### Active MCP Servers
+- **run_python**: Execute Python code via Deno
+- **internet_search**: DuckDuckGo search capabilities  
+- **context7**: Context management and documentation
+- **desktop_commander**: Desktop automation tools
+
+### AWS Bedrock Compatibility
+- Configured for AWS Bedrock with Amazon Nova model
+- Schema validation compatible with Bedrock requirements
+- Proper error handling for model-specific limitations
